@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{.Title}}</title>
+</head>
+<body>
+  {{range $i, $e := .Hobbies}}
+  <h1>{{$i}}. {{$e}}</h1>
+  {{else}}
+  <h1>Tidak mempunyai hobby</h1>
+  {{end}}
+</body>
+</html>

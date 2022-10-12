@@ -1,0 +1,43 @@
+# Get all categories
+GET http://www.localhost:3000/api/categories
+Accept: application/json
+api_key: tokenrahasia
+
+###
+
+# Get Category by Id
+GET http://www.localhost:3000/api/categories/3
+Accept: application/json
+api_key: tokenrahasia
+
+###
+
+# Create new category
+POST http://www.localhost:3000/api/categories
+Accept: application/json
+Content-Type: application/json
+api_key: tokenrahasia
+
+{
+  "name": "Fashion"
+}
+
+###
+
+# UPDATE category
+PUT http://www.localhost:3000/api/categories/4
+Accept: application/json
+Content-Type: application/json
+api_key: tokenrahasia
+
+{
+  "name": "Fashion Update"
+}
+
+###
+
+# Delete category
+DELETE  http://www.localhost:3000/api/categories/4
+Accept: application/json
+api_key: tokenrahasia
+

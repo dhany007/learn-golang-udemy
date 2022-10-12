@@ -1,0 +1,21 @@
+package simple
+
+import "fmt"
+
+type Connection struct {
+	*File
+}
+
+func NewConnection(file *File) (*Connection, func()) {
+	connection := &Connection{
+		File: file,
+	}
+
+	return connection, func() {
+		connection.Close()
+	}
+}
+
+func (c *Connection) Close() {
+	fmt.Print("Close Connection", c.File.Name)
+}
